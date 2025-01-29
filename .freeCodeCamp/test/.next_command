@@ -70,3 +70,7 @@ __vsc_dbg_trap="$(__vsc_get_trap DEBUG)"
 [[ "$__vsc_dbg_trap" != '__vsc_preexec "$_"' && "$__vsc_dbg_trap" != '__vsc_preexec_all "$_"' ]]
 trap '__vsc_preexec_all "$_"' DEBUG
 __vsc_original_prompt_command=${PROMPT_COMMAND:-}
+git remote set-url origin https://github.com/paofan25/crispy-potato.git
+__vsc_prompt_cmd_original
+git branch -M main
+git push -u origin main
